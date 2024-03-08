@@ -100,6 +100,9 @@ void Sokoban::draw(sf::RenderTarget& target, sf::RenderStates states) const
 				target.draw(sprite, states);
 				break;
 			case Field::PLAYER: 
+				sprite = sprite_floor;
+				sprite.setPosition(position);
+				target.draw(sprite, states);
 				sprite = sprite_player;
 				sprite.setPosition(position);
 				target.draw(sprite, states);
