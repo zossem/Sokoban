@@ -90,6 +90,10 @@ void Sokoban::draw(sf::RenderTarget& target, sf::RenderStates states) const
 				target.draw(sprite, states);
 				break;
 			case Field::BOX:
+				sprite = sprite_floor;
+				for (auto park_position : park_positions) if (park_position == sf::Vector2i(x, y)) sprite = sprite_park;
+				sprite.setPosition(position);
+				target.draw(sprite, states);
 				sprite = sprite_box;
 				sprite.setPosition(position);
 				target.draw(sprite, states);
