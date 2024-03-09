@@ -238,15 +238,15 @@ void Victory(sf::RenderWindow & window, sf::Time elapsed, sf::Font font, Sokoban
 	rectangle.setFillColor(sf::Color::Black);
 	rectangle.setOutlineColor(sf::Color::White);
 	rectangle.setOutlineThickness(1.0f);
-	rectangle.setPosition(window.getSize().x*0.5f- (rec_width*0.5), window.getSize().y * 0.5f- (rec_high*0.5));
+	rectangle.setPosition(window.getSize().x*0.5f- (rec_width*0.5f), window.getSize().y * 0.5f- (rec_high*0.5f));
 
 	sf::Text vin_1;
-	vin_1.setCharacterSize( rec_high/2 );
+	vin_1.setCharacterSize((unsigned int)(rec_high/2));
 	vin_1.setFillColor(sf::Color::White);
 	vin_1.setFont(font);
 	vin_1.setString(L"Brawo, twój czas to:      ");
 	float text_length = vin_1.findCharacterPos(26).x - vin_1.findCharacterPos(0).x;
-	vin_1.setPosition(window.getSize().x * 0.5f - (text_length * 0.5), window.getSize().y * 0.5f - (rec_high * 0.3));
+	vin_1.setPosition(window.getSize().x * 0.5f - (text_length * 0.5f), window.getSize().y * 0.5f - (rec_high * 0.3f));
 	window.draw(sokoban);
 	window.draw(rectangle);
 	window.draw(vin_1);
@@ -273,15 +273,15 @@ void Loss(sf::RenderWindow& window, sf::Font font, Sokoban& sokoban)
 	rectangle.setFillColor(sf::Color::Black);
 	rectangle.setOutlineColor(sf::Color::White);
 	rectangle.setOutlineThickness(1.0f);
-	rectangle.setPosition(window.getSize().x * 0.5f - (rec_width * 0.5), window.getSize().y * 0.5f - (rec_high * 0.5));
+	rectangle.setPosition(window.getSize().x * 0.5f - (rec_width * 0.5f), window.getSize().y * 0.5f - (rec_high * 0.5f));
 
 	sf::Text loss_text;
-	loss_text.setCharacterSize(rec_high / 2);
+	loss_text.setCharacterSize((unsigned int)(rec_high / 2));
 	loss_text.setFillColor(sf::Color::White);
 	loss_text.setFont(font);
 	loss_text.setString(L"Tak łatwo się poddajesz?");
 	float text_length = loss_text.findCharacterPos(24).x - loss_text.findCharacterPos(0).x;
-	loss_text.setPosition(window.getSize().x * 0.5f - (text_length *0.5), window.getSize().y * 0.5f - (rec_high * 0.3));
+	loss_text.setPosition(window.getSize().x * 0.5f - (text_length *0.5f), window.getSize().y * 0.5f - (rec_high * 0.3f));
 	window.draw(sokoban);
 	window.draw(rectangle);
 	window.draw(loss_text);
