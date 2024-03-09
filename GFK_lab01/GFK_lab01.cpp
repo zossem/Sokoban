@@ -5,6 +5,14 @@
 #include <fstream>
 #include <iostream>
 
+#include "box.png.h"
+#include "comic.ttf.h"
+#include "floor.png.h"
+#include "park.png.h"
+#include "player.png.h"
+#include "void.png.h"
+#include "wall.png.h"
+
 enum class Field { VOID, FLOOR, WALL, BOX, PARK, PLAYER };
 
 
@@ -202,13 +210,22 @@ bool Sokoban::Is_Victory() const
 
 void Sokoban::SetSprites()
 {
-	
+	/*
 	texture_void.loadFromFile("void.png");
 	texture_floor.loadFromFile("floor.png");
 	texture_wall.loadFromFile("wall.png");
 	texture_box.loadFromFile("box.png");
 	texture_park.loadFromFile("park.png");
 	texture_player.loadFromFile("player.png");
+	*/
+
+	texture_void.loadFromMemory(void_png, sizeof(void_png));
+	texture_floor.loadFromMemory(floor_png, sizeof(floor_png));
+	texture_wall.loadFromMemory(wall_png, sizeof(wall_png));
+	texture_box.loadFromMemory(box_png, sizeof(box_png));
+	texture_park.loadFromMemory(park_png, sizeof(park_png));
+	texture_player.loadFromMemory(player_png, sizeof(player_png));
+
 	sprite_void.setTexture(texture_void);
 	sprite_floor.setTexture(texture_floor);
 	sprite_wall.setTexture(texture_wall);
@@ -302,7 +319,8 @@ int main()
 	sokoban.SetDrawParameters(window.getSize());
 
 	sf::Font font;
-	font.loadFromFile("comic.ttf");
+	//font.loadFromFile("comic.ttf");
+	font.loadFromMemory(comic_ttf, sizeof(comic_ttf));
 
 	sf::Text time_passed;
 	time_passed.setFillColor(sf::Color::Red);

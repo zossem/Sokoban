@@ -19,4 +19,27 @@
       <Filter>Sources</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="box.png.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="comic.ttf.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="floor.png.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="park.png.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="player.png.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="void.png.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="wall.png.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

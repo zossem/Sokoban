@@ -144,6 +144,15 @@
   <ItemGroup>
     <ClCompile Include="GFK_lab01.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="box.png.h" />
+    <ClInclude Include="comic.ttf.h" />
+    <ClInclude Include="floor.png.h" />
+    <ClInclude Include="park.png.h" />
+    <ClInclude Include="player.png.h" />
+    <ClInclude Include="void.png.h" />
+    <ClInclude Include="wall.png.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
